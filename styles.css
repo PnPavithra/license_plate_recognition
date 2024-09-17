@@ -1,0 +1,30 @@
+h1 {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.button {
+    background-color: coral;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: lightpink;
+}
+
+#preview {
+    display: none;
+    max-width: 100%;
+}
