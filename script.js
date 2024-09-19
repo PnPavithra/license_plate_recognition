@@ -17,6 +17,11 @@ document.getElementById('file-upload').onchange = function(event) {
         method: 'POST',
         body: formData
     }).then(response => response.json()).then(data => {
+        if (data.error){
+            document.getElementById('ocr-result').innerText = "Error: " + data.error;
+        }
+        else{
         document.getElementById('ocr-result').innerText = "License Plate: " + data.txt;
+        }
     }).catch(error => console.error('Error:', error));
 };

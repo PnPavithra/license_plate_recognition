@@ -30,9 +30,8 @@ count = 0
 list1 = []
 processed_numbers = set()
 
-# Open file for writing car plate data
 with open("car_plate_data.txt", "a") as file:
-    file.write("NumberPlate\tDate\tTime\n")  # Writing column headers
+    file.write("NumberPlate\tDate\tTime\n") 
 
 while True:    
     ret, frame = cap.read()
@@ -77,7 +76,7 @@ while True:
       
     cv2.polylines(frame, [np.array(area, np.int32)], True, (255, 0, 0), 2)
     cv2.imshow("RGB", frame)
-    if cv2.waitKey(0) & 0xFF == 27:
+    if cv2.waitKey(0 ) & 0xFF == 27:
         break
 
 cap.release()    
